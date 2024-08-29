@@ -97,36 +97,36 @@ Ensure your data sources cover the following metrics:
  ■ Line Chart: Inventory trends over time.
 SQL code
 // Calculated fields for inventory management
-# Days of Inventory Remaining: [InventoryLevel] / AVG([DailySales])
+ Days of Inventory Remaining: [InventoryLevel] / AVG([DailySales])
 
 # Order Fulfillment Sheet:
 ■ Line Chart: Order fulfillment status over time.
 ■ Bar Chart: On-time delivery rates by product or customer.
 SQL code
 // Calculated fields for order fulfillment
-# On-Time Delivery Rate: `SUM(IF [OnTimeDelivery] = 'Yes' THEN 1 ELSE 0 END) / COUNT([OrderID])`
+ On-Time Delivery Rate: `SUM(IF [OnTimeDelivery] = 'Yes' THEN 1 ELSE 0 END) / COUNT([OrderID])`
 
 # Supplier Performance Sheet:
 ■ Bar Chart: Average delivery time by supplier.
 ■ Line Chart: Defect rates over time.
 SQL code
 // Calculated fields for supplier performance
-# Average Delivery Time: `AVG([DeliveryTime])`
-# Defect Rate: `SUM([DefectiveUnits]) / SUM([TotalUnits])`
+Average Delivery Time: `AVG([DeliveryTime])`
+ Defect Rate: `SUM([DefectiveUnits]) / SUM([TotalUnits])`
 
 # Transportation Efficiency Sheet:
 ■ Scatter Plot: Transit times by carrier and delivery status.
 ■ Line Chart: Delivery status over time.
 SQL code
 // Calculated fields for transportation efficiency
-# Average Transit Time: `AVG([TransitTime])`
+ Average Transit Time: `AVG([TransitTime])`
 
 ○ Supply Chain Costs Sheet:
 ■ Pie Chart: Distribution of costs by type.
 ■ Line Chart: Supply chain costs over time.
 SQL code
 // Calculated fields for supply chain costs
-# Total Costs: `SUM([Amount])`
+   Total Costs: `SUM([Amount])`
 
 # 3. Combine Sheets into a Dashboard:
 
